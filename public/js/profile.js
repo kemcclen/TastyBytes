@@ -7,6 +7,11 @@ const newFormHandler = async (event) => {
   const steps = document.querySelector('#steps').value.trim();
   const description = document.querySelector('#description').value.trim();
 
+  let arrStep = steps.split(',')
+  console.log(arrStep)
+  let arrInge = ingredients.split(',')
+  console.log(arrInge)
+
   if (recipe_name && totalTime && ingredients && steps && description) {
     const response = await fetch(`/api/recipes`, {
       method: 'POST',
@@ -25,6 +30,7 @@ const newFormHandler = async (event) => {
   }
 };
 
+
 const delButtonHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');
@@ -41,6 +47,9 @@ const delButtonHandler = async (event) => {
   }
 };
 
+document
+  .querySelector('.new-project-form')
+  .addEventListener('submit', newFormHandler);
 document
   .querySelector('.new-project-form')
   .addEventListener('submit', newFormHandler);

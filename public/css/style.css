@@ -40,3 +40,7 @@ li {
 #recipe_name{
   text-align: center;
 }
+
+textarea {
+  resize: none;
+}
