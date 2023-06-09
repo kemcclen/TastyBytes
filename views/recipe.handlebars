@@ -1,0 +1,24 @@
+<div class="text-center">
+  <h2>{{recipe_name}}</h2>
+
+  <h3>Description</h3>
+  <p>{{{description}}}</p>
+  <p>
+    <span for="img" aria-label="money">🍽</span>
+    <span class="totalTime">{{totalTime}}</span>
+    minutes of cooking time
+  </p>
+
+  <h3>Ingredients</h3>
+  {{!-- Replace code with for each loop later --}}
+    <ul>
+      <li>  <p>{{ingredients}}</p>  </li>
+    </ul>
+  <h3>Steps:</h3>
+    {{!-- Replace code with for each loop later --}}
+  <ol>
+    <li>  <p>{{steps}}</p>  </li>
+  </ol>
+
+  <p>Created by {{user.name}}</p>
+</div>
