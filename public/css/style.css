@@ -22,3 +22,21 @@ header, .project:not(:last-child) {
   font-weight: bold;
   margin-left: -5px;
 }
+
+.recipe-container {
+  margin: 0 auto;
+  width: 50%;
+  padding: 0 50px;
+}
+
+ul{
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+#recipe_name{
+  text-align: center;
+}
