@@ -26,30 +26,6 @@ nav a {
   text-decoration: underline;
 }
 
-.dollar-amount {
-  color: #056605;
-  font-weight: bold;
-  margin-left: -5px;
-}
-
-.recipe-container {
-  margin: 0 auto;
-  width: 50%;
-  padding: 0 50px;
-}
-
-ul{
-  padding: 0;
-}
-
-li {
-  list-style-type: none;
-}
-
-#recipe_name{
-  text-align: center;
-}
-
 textarea {
   resize: none;
 }
@@ -128,4 +104,61 @@ textarea {
 
 .hidden {
   display: none;
+}
+
+/* Recipes List Styles */
+
+.recipes-container{
+  padding: 25px;
+}
+
+.recipes-container h1{
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.list-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.recipe-card {
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 5px 10px 0.75rem 4px grey;
+  width: 225px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Recipe Styles */
+
+.recipe-container {
+  margin: 0 auto;
+  width: 50%;
+  padding: 20px 50px;
+  border-radius: 15px;
+  box-shadow: 5px 10px 0.75rem 4px grey;
+}
+
+ul{
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+#recipe_name{
+  text-align: center;
+}
+
+.recipe-content {
+  border-radius: 15px;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid rgb(206, 206, 206);
 }
