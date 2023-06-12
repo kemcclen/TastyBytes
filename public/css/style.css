@@ -2,6 +2,15 @@ header, .project:not(:last-child) {
   border-bottom: 1px solid #ccc;
 }
 
+nav {
+  margin-right: 30px;
+}
+
+nav a {
+  margin-right: 20px;
+}
+
+
 .no-button {
   background: none;
   border: none;
@@ -43,4 +52,68 @@ li {
 
 textarea {
   resize: none;
+}
+
+/* Main Page Styling */
+
+/* Hero Image */
+
+.hero-container {
+  width: 100%;
+  height: 700px;
+  background-image: url('../images/recipe_hero.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-container h1 {
+  font-size: 70pt;
+  box-shadow: 5px 10px 0.75rem 4px rgba(204, 204, 204);
+  background: rgba(204, 204, 204, 0.5);
+  padding: 15px 25px;
+  border-radius: 10px;
+}
+
+/* Getting Started Buttons */
+
+.starting-container {
+  display: flex;
+  justify-content: space-between;
+  height: 200px;
+  width: 100%;
+}
+
+.start-card {
+  width: 50%;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.start-card h2 {
+  font-size: 30pt;
+  box-shadow: 5px 10px 0.75rem 4px rgba(204, 204, 204);
+  background: rgba(29, 29, 29, 0.5);
+  padding: 15px 25px;
+  border-radius: 10px;
+  color: white;
+}
+
+#recipeCard {
+  background-image: url('../images/recipebook.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#profileCard {
+  background-image: url('../images/profile.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
