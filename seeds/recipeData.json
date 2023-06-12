@@ -1,0 +1,30 @@
+[
+  {
+    "recipe_name": "Quick Butter Chicken",
+    "description": "A classic and all-time-favourite Indian dish, made simpler for busy weeknights.",
+    "Ingredients": [
+      "1 tablespoon oil",
+      "1 tablespoon butter",
+      "1 medium onion diced",
+      "1 teaspoon fresh ginger finely minced or grated (or use paste)",
+      "2-3 cloves garlic finely minced or crushed",
+      "1 ½ pounds about 2-3 boneless, skinless chicken breasts, cut into ¾-inch chunks",
+      "4 tablespoons tomato paste or 8 oz can of tomato sauce",
+      "1 tablespoon garam masala",
+      "1 teaspoon  or paprika",
+      "1 teaspoon Fenugreek",
+      "1 teaspoon cumin",
+      "1 tsp salt",
+      "1/4 tsp black pepper",
+      "1 cup heavy cream",
+      "Hot cooked rice or naan for serving"
+    ],
+    "steps": [
+      "Heat a large skillet or medium saucepan over medium-high heat. Add the oil, butter, and onions and cook onions down until lightly golden, about 3-4 minutes. Add ginger and garlic and let cook for 30 seconds, stirring so it doesn’t burn.",
+      "Add the chicken, tomato paste, and spices. Cook for 5-6 minutes or until everything is cooked through.",
+      "Add the heavy cream and simmer for 8-10 minutes stirring occasionally. Serve over Basmati rice or with naan."
+    ],
+    "totalTime": 20,
+    "user_id": 1
+  }
+]

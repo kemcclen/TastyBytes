@@ -19,14 +19,26 @@ Recipe.init(
         type: DataTypes.STRING,
       },
       ingredients: {
-        type: DataTypes.JSON, //We can parse the JSON data and turn it into an array apparently
+        type: DataTypes.TEXT,
         allowNull: false,
+        get() {
+          return JSON.parse(this.getDataValue('ingredients'));
+        },
+        set(value) {
+          this.setDataValue('ingredients', JSON.stringify(value));
+        },
       },
       steps: {
-        type: DataTypes.JSON, //We can parse the JSON data and turn it into an array apparently
+        type: DataTypes.TEXT,
         allowNull: false,
+        get() {
+          return JSON.parse(this.getDataValue('steps'));
+        },
+        set(value) {
+          this.setDataValue('steps', JSON.stringify(value));
+        },
       },
-      totalTime: {
+      total_time: {
         type: DataTypes.INTEGER,
         allowNull: false
       },

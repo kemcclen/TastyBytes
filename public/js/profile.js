@@ -20,7 +20,7 @@ const newFormHandler = async (event) => {
       document.location.replace('/profile');
     } else {
       console.log(response);
-      alert('Failed to create project');
+      alert('Failed to create recipe');
     }
   }
 };
@@ -29,22 +29,22 @@ const delButtonHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');
 
-    const response = await fetch(`/api/projects/${id}`, {
+    const response = await fetch(`/api/recipes/${id}`, {
       method: 'DELETE',
     });
 
     if (response.ok) {
       document.location.replace('/profile');
     } else {
-      alert('Failed to delete project');
+      alert('Failed to delete recipe');
     }
   }
 };
 
 document
-  .querySelector('.new-project-form')
+  .querySelector('.new-recipe-form')
   .addEventListener('submit', newFormHandler);
 
 document
-  .querySelector('.project-list')
+  .querySelector('.recipe-list')
   .addEventListener('click', delButtonHandler);
