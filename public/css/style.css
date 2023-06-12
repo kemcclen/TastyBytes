@@ -117,3 +117,15 @@ textarea {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+/* Login Styles */
+
+.login-form, .signup-form{
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 5px 10px 0.75rem 4px grey;
+}
+
+.hidden {
+  display: none;
+}
