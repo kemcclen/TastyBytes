@@ -49,6 +49,19 @@ router.get('/recipe/:id', async (req, res) => {
   }
 });
 
+router.post('/recipes', withAuth, async (req, res) => {
+  try {
+    const newRecipe = await Recipe.create({
+      ...req.body,
+      user_id: req.session.user_id,
+    });
+
+    res.status(200).json(newRecipe);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
 // Use withAuth middleware to prevent access to route
 router.get('/profile', withAuth, async (req, res) => {
   try {
@@ -68,6 +81,8 @@ router.get('/profile', withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+
 
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
