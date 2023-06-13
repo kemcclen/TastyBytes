@@ -1,13 +1,35 @@
 const router = require('express').Router();
 const { Recipe } = require('../../models');
 const withAuth = require('../../utils/auth');
+const SerpApi = require('google-search-results-nodejs');
+const search = new SerpApi.GoogleSearch('6b2585271d521462cb695882bbcfb2af78a6bc786ac158abd044d6185ae2d019');
 
 router.post('/', withAuth, async (req, res) => {
+
+  const { recipe_name, description, ingredients, steps, totalTime } = req.body;
   try {
     const newRecipe = await Recipe.create({
-      ...req.body,
+      recipe_name,
+      description,
+      ingredients,
+      steps,
+      totalTime,
       user_id: req.session.user_id,
     });
+
+    const params = {
+      q: newRecipe.recipe_name,
+      engine: 'google_images',
+      tbm: 'isch',
+      num: 5,
+    };
+
+    const searchResult = await search.json(params);
+
+    const image_url = searchResult.images_results[0]?.original;
+    
+    newRecipe.image_url = image_url;
+    await newRecipe.save();
 
     res.status(200).json(newRecipe);
   } catch (err) {
