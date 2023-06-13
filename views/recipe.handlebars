@@ -1,24 +1,34 @@
-<div class="text-center">
-  <h2>{{recipe_name}}</h2>
+<section class="container container-fluid mt-5">
+  <section class="text-center recipe-container">
+    <h2 id="recipe_name">{{recipe_name}}</h2>
+    <div class="recipe-content">
+      <div class="description">
+        <p>{{{description}}}</p>
+      </div>
+      <p>
+        <span for="img" aria-label="money">🍽</span>
+        <span class="totalTime">{{totalTime}}</span>
+        minutes of cooking time
+      </p>
+    </div>
+    
+    <div class="recipe-content">
+      <h3>Ingredients</h3>
+      {{!-- Replace code with for each loop later --}}
+      <ul>
+        <li>  <p>{{ingredients}}</p>  </li>
+      </ul>
+    </div>
 
-  <h3>Description</h3>
-  <p>{{{description}}}</p>
-  <p>
-    <span for="img" aria-label="money">🍽</span>
-    <span class="totalTime">{{totalTime}}</span>
-    minutes of cooking time
-  </p>
+    <div class="recipe-content">
+      <h3>Directions</h3>
+        {{!-- Replace code with for each loop later --}}
+        <div class="steps-container">
+          <b>Step 1</b>
+          <p>{{steps}}</p>  
+        </div>
+    </div>
 
-  <h3>Ingredients</h3>
-  {{!-- Replace code with for each loop later --}}
-    <ul>
-      <li>  <p>{{ingredients}}</p>  </li>
-    </ul>
-  <h3>Steps:</h3>
-    {{!-- Replace code with for each loop later --}}
-  <ol>
-    <li>  <p>{{steps}}</p>  </li>
-  </ol>
-
-  <p>Created by {{user.name}}</p>
-</div>
+    <p>Created by {{user.name}}</p>
+  </section>
+</section>

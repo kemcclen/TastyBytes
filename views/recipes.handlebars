@@ -1,0 +1,17 @@
+<!-- Loop over each object in the projects array -->
+<section class="recipes-container">
+  <h1>Recipes</h1>
+  <section class="list-container">
+  {{#each recipes as |recipe| }}
+    <div class="recipe-card">
+      <div>
+        <h2><a href="/recipe/{{recipe.id}}">{{recipe.recipe_name}}</a></h2>
+      </div>
+      <div>
+        <p>By <b>{{recipe.user.name}}</b></p>
+        <p>Totale Time: {{recipe.totalTime}}</p>
+      </div>
+    </div>
+  {{/each}}
+  </section>
+</section>

@@ -2,6 +2,15 @@ header, .project:not(:last-child) {
   border-bottom: 1px solid #ccc;
 }
 
+nav {
+  margin-right: 30px;
+}
+
+nav a {
+  margin-right: 20px;
+}
+
+
 .no-button {
   background: none;
   border: none;
@@ -17,8 +26,158 @@ header, .project:not(:last-child) {
   text-decoration: underline;
 }
 
-.dollar-amount {
-  color: #056605;
-  font-weight: bold;
-  margin-left: -5px;
+textarea {
+  resize: none;
+}
+
+/* Main Page Styling */
+
+/* Hero Image */
+
+.hero-container {
+  width: 100%;
+  height: 700px;
+  background-image: url('../images/recipe_hero.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-container h1 {
+  font-size: 70pt;
+  box-shadow: 5px 10px 0.75rem 4px rgba(204, 204, 204);
+  background: rgba(204, 204, 204, 0.5);
+  padding: 15px 25px;
+  border-radius: 10px;
+}
+
+/* Getting Started Buttons */
+
+.starting-container {
+  display: flex;
+  justify-content: space-between;
+  height: 200px;
+  width: 100%;
+}
+
+.start-card {
+  width: 50%;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.start-card h2 {
+  font-size: 30pt;
+  box-shadow: 5px 10px 0.75rem 4px rgba(204, 204, 204);
+  background: rgba(29, 29, 29, 0.5);
+  padding: 15px 25px;
+  border-radius: 10px;
+  color: white;
+}
+
+#recipeCard {
+  background-image: url('../images/recipebook.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#profileCard {
+  background-image: url('../images/profile.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Login Styles */
+
+.login-form, .signup-form{
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 5px 10px 0.75rem 4px grey;
+}
+
+/* Recipes List Styles */
+
+.recipes-container{
+  padding: 25px;
+}
+
+.recipes-container h1{
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.list-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.recipe-card {
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 5px 10px 0.75rem 4px grey;
+  width: 225px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Recipe Styles */
+
+.recipe-container {
+  margin: 0 auto;
+  width: 50%;
+  padding: 20px 50px;
+  border-radius: 15px;
+  box-shadow: 5px 10px 0.75rem 4px grey;
+}
+
+ul{
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+.recipe-content {
+  border-radius: 15px;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid rgb(206, 206, 206);
+}
+
+.form-container, .recipe-list {
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 5px 10px 0.75rem 4px grey;
+}
+
+.recipe-list-card {
+  border-radius: 15px;
+  padding: 15px;
+  border: 1px solid rgb(206, 206, 206);
+  margin-bottom: 10px;
+  width: 97%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-new-recipe {
+  margin: 50px auto;
+  display: block; 
+}
+
+/* Hidden */
+
+.hidden {
+  display: none;
 }

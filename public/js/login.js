@@ -51,3 +51,18 @@ document
 document
   .querySelector('.signup-form')
   .addEventListener('submit', signupFormHandler);
+
+  
+document.querySelector('#createAccount').addEventListener('click', () => {
+  let loginForm = document.querySelector('.login-form');
+  let signup = document.querySelector('.signup-form');
+  loginForm.classList.add('hidden');
+  signup.classList.remove('hidden');
+})
+
+document.querySelector('#loginAccount').addEventListener('click', () => {
+  let loginForm = document.querySelector('.login-form');
+  let signup = document.querySelector('.signup-form');
+  loginForm.classList.remove('hidden');
+  signup.classList.add('hidden');
+})
