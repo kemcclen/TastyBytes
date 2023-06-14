@@ -4,40 +4,46 @@ const withAuth = require('../../utils/auth');
 const SerpApi = require('google-search-results-nodejs');
 const search = new SerpApi.GoogleSearch('6b2585271d521462cb695882bbcfb2af78a6bc786ac158abd044d6185ae2d019');
 
-router.post('/', withAuth, async (req, res) => {
-
+router.post('/test', async (req, res) => {
   const { recipe_name, description, ingredients, steps, totalTime } = req.body;
   try {
+    
+    const params = {
+      q: recipe_name,
+      engine: 'google_images',
+      tbm: 'isch',
+      num: 5,
+    };
+
+    const callback = function(data) {
+        const image = data.images_results[0].thumbnail;
+        console.log(image);
+        return image;
+      };
+    
+    const image_url = search.json(params, callback);
+    console.log(image_url);
+    
+
     const newRecipe = await Recipe.create({
       recipe_name,
       description,
       ingredients,
       steps,
       totalTime,
+      image_url,
       user_id: req.session.user_id,
     });
-
-    const params = {
-      q: newRecipe.recipe_name,
-      engine: 'google_images',
-      tbm: 'isch',
-      num: 5,
-    };
-
-    const searchResult = await search.json(params);
-
-    const image_url = searchResult.images_results[0]?.original;
     
-    newRecipe.image_url = image_url;
-    await newRecipe.save();
-
     res.status(200).json(newRecipe);
+    // res.status(200).json(searchResult);
   } catch (err) {
+    console.log(err);
     res.status(400).json(err);
   }
 });
 
-router.delete('/:id', withAuth, async (req, res) => {
+router.delete('/:id', async (req, res) => {
   try {
     const recipeData = await Recipe.destroy({
       where: {

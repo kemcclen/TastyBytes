@@ -21,12 +21,12 @@ const newRecipeHandler = async (event) => {
       },
     });
 
-    if (response.ok) {
-      document.location.replace('/profile');
-    } else {
-      console.log(response);
-      alert('Failed to create project');
-    }
+    // if (response.ok) {
+    //   document.location.replace('/profile');
+    // } else {
+    //   console.log(response);
+    //   alert('Failed to create project');
+    // }
   }
 };
 
