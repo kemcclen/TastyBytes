@@ -6,6 +6,7 @@ const newRecipeHandler = async (event) => {
   const ingredients = document.querySelector('#ingredients').value.trim();
   const steps = document.querySelector('#steps').value.trim();
   const description = document.querySelector('#description').value.trim();
+  const image_url = document.querySelector(".image");
 
   let arrStep = steps.split(',')
   console.log(arrStep)
@@ -15,7 +16,7 @@ const newRecipeHandler = async (event) => {
   if (recipe_name && totalTime && ingredients && steps && description) {
     const response = await fetch(`/api/recipes`, {
       method: 'POST',
-      body: JSON.stringify({ recipe_name, totalTime, ingredients, steps, description}),
+      body: JSON.stringify({ recipe_name, totalTime, ingredients, steps, description, image_url}),
       headers: {
         'Content-Type': 'application/json',
       },
