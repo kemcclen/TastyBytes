@@ -1,5 +1,55 @@
-header, .project:not(:last-child) {
-  border-bottom: 1px solid #ccc;
+a {
+  text-decoration: none;
+  color: #3D8361;
+}
+
+a:hover {
+  color: 	#D6CDA4;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button:hover, input:hover {
+  cursor: pointer;
+}
+
+h1, h2, h3 {
+  color: #1C6758;
+}
+
+
+main {
+  min-height: 100vh;
+  background-image: url('../images/foodbg1.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-container h1, .start-card h2,
+.login-form, .signup-form, .recipe-card, .recipe-container,
+.form-container, .recipe-list {
+  box-shadow: 5px 10px 0.75rem 4px 	#646464;
+  padding: 15px 25px;
+  border-radius: 10px;
+}
+
+.login-form, .signup-form, .recipes-container, 
+.recipe-container, .form-container, .recipe-list {
+  margin-top: 100px;
+}
+
+/* Header Styles */
+
+header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+
+header h1 a {
+  color: 	#1C6758;
 }
 
 nav {
@@ -8,26 +58,10 @@ nav {
 
 nav a {
   margin-right: 20px;
-}
-
-
-.no-button {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  color: #1b89bc;
-  text-decoration: none;
-  font-size: 100%;
-}
-
-.no-button:hover {
-  color: #065b83;
-  text-decoration: underline;
-}
-
-textarea {
-  resize: none;
+  font-size: 14pt;
+  color: 	#1C6758;
+  padding: 3px 10px;
+  border-radius: 5px;
 }
 
 /* Main Page Styling */
@@ -36,7 +70,7 @@ textarea {
 
 .hero-container {
   width: 100%;
-  height: 700px;
+  height: 75vh;
   background-image: url('../images/recipe_hero.jpg');
   background-position: center;
   background-repeat: no-repeat;
@@ -48,10 +82,8 @@ textarea {
 
 .hero-container h1 {
   font-size: 70pt;
-  box-shadow: 5px 10px 0.75rem 4px rgba(204, 204, 204);
-  background: rgba(204, 204, 204, 0.5);
-  padding: 15px 25px;
-  border-radius: 10px;
+  background: rgba(29, 29, 29, 0.5);
+  color: #1C6758;
 }
 
 /* Getting Started Buttons */
@@ -59,7 +91,7 @@ textarea {
 .starting-container {
   display: flex;
   justify-content: space-between;
-  height: 200px;
+  height: 25vh;
   width: 100%;
 }
 
@@ -73,11 +105,16 @@ textarea {
 
 .start-card h2 {
   font-size: 30pt;
-  box-shadow: 5px 10px 0.75rem 4px rgba(204, 204, 204);
   background: rgba(29, 29, 29, 0.5);
-  padding: 15px 25px;
-  border-radius: 10px;
-  color: white;
+}
+
+.start-card a {
+  color: #D6CDA4;
+
+}
+
+.start-card a:hover {
+  color: #3D8361;
 }
 
 #recipeCard {
@@ -97,9 +134,7 @@ textarea {
 /* Login Styles */
 
 .login-form, .signup-form{
-  border-radius: 15px;
-  padding: 20px;
-  box-shadow: 5px 10px 0.75rem 4px grey;
+  background-color: #fcfff7;
 }
 
 /* Recipes List Styles */
@@ -120,9 +155,7 @@ textarea {
 }
 
 .recipe-card {
-  border-radius: 15px;
-  padding: 20px;
-  box-shadow: 5px 10px 0.75rem 4px grey;
+  background-color: #fcfff7;
   width: 225px;
   height: 300px;
   display: flex;
@@ -135,9 +168,8 @@ textarea {
 .recipe-container {
   margin: 0 auto;
   width: 50%;
-  padding: 20px 50px;
-  border-radius: 15px;
-  box-shadow: 5px 10px 0.75rem 4px grey;
+  background-color: #fcfff7;
+  margin-top: 100px;
 }
 
 ul{
@@ -151,21 +183,21 @@ li {
 .recipe-content {
   border-radius: 15px;
   padding: 15px;
+  border: 1px solid 	rgb(206, 206, 206);
   margin-bottom: 15px;
-  border: 1px solid rgb(206, 206, 206);
 }
 
+/* Profile Styles */
+
 .form-container, .recipe-list {
-  border-radius: 15px;
-  padding: 20px;
-  box-shadow: 5px 10px 0.75rem 4px grey;
+  background-color: #fcfff7;
 }
 
 .recipe-list-card {
   border-radius: 15px;
   padding: 15px;
-  border: 1px solid rgb(206, 206, 206);
-  margin-bottom: 10px;
+  border: 1px solid 	rgb(206, 206, 206);
+  margin-bottom: 15px;
   width: 97%;
   margin-left: auto;
   margin-right: auto;
@@ -174,6 +206,10 @@ li {
 .btn-new-recipe {
   margin: 50px auto;
   display: block; 
+}
+
+textarea {
+  resize: none;
 }
 
 /* Hidden */
