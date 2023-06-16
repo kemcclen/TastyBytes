@@ -7,9 +7,12 @@
       <div>
         <h2><a href="/recipe/{{recipe.id}}">{{recipe.recipe_name}}</a></h2>
       </div>
-      <div>
+      <div class="image-container">
+        <img src={{recipe.image_url}} alt={{recipe.recipe_name}} class="recipeImage">
+      </div>
+      <div class="recipe-details">
         <p>By <b>{{recipe.user.name}}</b></p>
-        <p>Totale Time: {{recipe.totalTime}}</p>
+        <p>Total Time: {{recipe.totalTime}}</p>
       </div>
     </div>
   {{/each}}

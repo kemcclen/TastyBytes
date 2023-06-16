@@ -4,7 +4,7 @@ const withAuth = require('../../utils/auth');
 const SerpApi = require('google-search-results-nodejs');
 const search = new SerpApi.GoogleSearch('6b2585271d521462cb695882bbcfb2af78a6bc786ac158abd044d6185ae2d019');
 
-router.post('/test', async (req, res) => {
+router.post('/', async (req, res) => {
   const { recipe_name, description, ingredients, steps, totalTime } = req.body;
   try {
     
@@ -12,17 +12,23 @@ router.post('/test', async (req, res) => {
       q: recipe_name,
       engine: 'google_images',
       tbm: 'isch',
-      num: 5,
+      num: 1,
     };
 
-    const callback = function(data) {
-        const image = data.images_results[0].thumbnail;
-        console.log(image);
-        return image;
-      };
+    // const callback = function(data) {
+    //     const image = data.images_results[0].thumbnail;
+    //     console.log(image);
+    //     return image;
+    //   };
     
-    const image_url = search.json(params, callback);
-    console.log(image_url);
+    const searchResult = await new Promise((resolve, reject) => {
+      search.json(params, resolve);
+    });
+
+    const image_url = searchResult.images_results[0].thumbnail;
+
+    // const image_url = search.json(params, callback);
+    // console.log(image_url);
     
 
     const newRecipe = await Recipe.create({
@@ -34,7 +40,11 @@ router.post('/test', async (req, res) => {
       image_url,
       user_id: req.session.user_id,
     });
+
     
+    
+    console.log(newRecipe);
+
     res.status(200).json(newRecipe);
     // res.status(200).json(searchResult);
   } catch (err) {
