@@ -170,6 +170,7 @@ nav a {
   align-items: center; /* Center the content horizontally */
   overflow: hidden;
   text-align: center;
+  background-color: white;
 }
 
 .recipe-card .recipe-name {
