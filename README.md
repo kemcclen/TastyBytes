@@ -22,7 +22,6 @@ TastyBytes is a full-stack web application that allows users to make an online r
 - Create an account
 - Log into your account
 - Create recipies
-- Update recepies
 - Delete recipes
 - View your recipe page dashboard
 - Logout
@@ -30,18 +29,21 @@ TastyBytes is a full-stack web application that allows users to make an online r
 
 ## Demonstration:
 
-1. **Create an Account** 
-![WorkFlow1](/assets/WorkFlow1.png)
+1. **Home Page** 
+![TastyBytes1](/assets/home.png)
 
-2. **Log into your Account**
-![WorkFlow2](/assets/WorkFlow2.png)
+2. **Create an Account** 
+![TastyBytes2](/assets/newUser.png)
 
-3. **Create a Recipe** 
-![WorkFlow3](/assets/WorkFlow3.png)
+3. **Log into your Account**
+![TastyBytes3](/assets/login.png)
 
-4. **Update a Recipe** 
+4. **Create a Recipe** 
+![TastyBytes4](/assets/createRecipe.png)
+![TastyBytes4](/assets/createRecipe2.png)
 
 5. **Delete a Recipe** 
+![TastyBytes5](/assets/recipeDelete.png)
 
 6. **View Recipe Dashboard** 
 
@@ -81,7 +83,8 @@ Thank you for considering contributing to TastyBytes. Your contributions are hig
 - Handlebars.js as the template engine
 - MySQL and the Sequelize ORM for the database.
 - Mailgun for welcome email
-- Photos????
+- Giphy.api
+- Google search results node.js
 - Express-session authentication
 - ENV environment variable protection 
 - MVC file structure
