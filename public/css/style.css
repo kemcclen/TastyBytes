@@ -167,7 +167,7 @@ nav a {
   height: 300px;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center the content horizontally */
+  align-items: center; 
   overflow: hidden;
   text-align: center;
   background-color: white;
