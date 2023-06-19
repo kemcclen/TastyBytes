@@ -30,6 +30,12 @@ Recipe.init(
         type: DataTypes.INTEGER,
         allowNull: false
       },
+      image_url: {
+        type: DataTypes.STRING
+      },
+      // giphy: {
+      //   type: DataTypes.STRING
+      // },
       user_id: {
         type: DataTypes.INTEGER,
         references: {

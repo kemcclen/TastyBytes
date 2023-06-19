@@ -82,12 +82,11 @@ Thank you for considering contributing to TastyBytes. Your contributions are hig
 - Node.js and Express.js to create a RESTful API
 - Handlebars.js as the template engine
 - MySQL and the Sequelize ORM for the database.
-- Mailgun for welcome email
-- Giphy.api
-- Google search results node.js
+- Google search results node.js by serp api
 - Express-session authentication
 - ENV environment variable protection 
 - MVC file structure
+- Heroku
 
 ## License:
 TastyBytes is licensed under the [MIT License](https://opensource.org/license/mit/).
