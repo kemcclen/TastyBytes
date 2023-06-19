@@ -41,11 +41,13 @@ TastyBytes is a full-stack web application that allows users to make an online r
 4. **Create a Recipe** 
 ![TastyBytes4](/assets/createRecipe.png)
 ![TastyBytes4](/assets/createRecipe2.png)
+![TastyBytes4](/assets/recipeCard.png)
 
 5. **Delete a Recipe** 
 ![TastyBytes5](/assets/recipeDelete.png)
 
 6. **View Recipe Dashboard** 
+![TastyBytes6](/assets/recipeDash.png)
 
 
 ## Contributions: 
