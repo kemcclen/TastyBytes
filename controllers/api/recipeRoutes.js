@@ -9,7 +9,7 @@ router.post('/', async (req, res) => {
   try {
     
     const params = {
-      q: recipe_name + "gif",
+      q: recipe_name,
       engine: 'google_images',
       tbm: 'isch',
       num: 1,
