@@ -71,7 +71,7 @@ Thank you for considering contributing to TastyBytes. Your contributions are hig
 
 ## Links: 
 - Repository: https://github.com/kemcclen/TastyBytes
-- Deployed Application: 
+- Deployed Application: https://git.heroku.com/tastybyts.git
 
 ## Credits
 - [Abhidesai508](https://github.com/jaychan0125)  - Abhishek Desi
