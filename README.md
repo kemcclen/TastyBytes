@@ -1,7 +1,7 @@
 # TastyBytes
 
 ## Description:
-TastyBytes is a full-stack web application that allows users to make an online recipe book.  
+TastyBytes is a full-stack web application that allows users to share recipes with other users online.  
 
 ## Table of Contents
 
