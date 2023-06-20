@@ -74,7 +74,7 @@ Thank you for considering contributing to TastyBytes. Your contributions are hig
 - Deployed Application: https://tastybyts-1e5618d2a801.herokuapp.com/
 
 ## Credits
-- [Abhidesai508](https://github.com/jaychan0125)  - Abhishek Desi
+- [Abhidesai508](https://github.com/jaychan0125)  - Abhishek Desai
 - [julie-mac](https://github.com/julie-mac)  - Julie Macpherson
 - [kemcclen](https://github.com/kemcclen)  - Katharine McClenaghan
 - [jef1197](https://github.com/jef1197)  - Jef Ogues
